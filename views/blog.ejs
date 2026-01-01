@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body class="mt-4 bg-black">
+    <div class="container fixed-md-container">
+        <%- include('partials/navbar') %>
+        <div class="body pb-3">
+            <div class="mb-3">
+                <h2 class="text-white h2"> <%= blog.title %> </h2>
+                <div class="text-white-50"> <%= blog.date %> </div>
+            </div>
+
+            <p class="text-white"> <%= blog.content %> </p>
+        </div>
+        <%- include('partials/footer') %>
+    </div>
+</body>
+</html>

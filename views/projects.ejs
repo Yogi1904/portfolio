@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body class="mt-4 bg-black">
+    <div class="container fixed-md-container">
+        <%- include('partials/navbar') %>
+        <section class="mt-5">
+            <h5 class="text-white mb-4">projects</h5>
+
+            <div class="d-flex flex-column gap-3">
+                <% projects.forEach(project => { %>
+                    <a href="<%= project.link %>" class="text-decoration-none">
+                        <div class="border border-dark p-3 rounded">
+                            <div class="text-white fw-medium"><%= project.name %></div>
+                            <div class="text-white-50 small mt-1"><%= project.description %></div>
+                            <div class="text-white-50 small mt-2"><%= project.stack %></div>
+                        </div>
+                    </a>
+                <% }) %>
+            </div>
+        </section>
+        <%- include('partials/footer') %>
+    </div>
+</body>
+</html>
