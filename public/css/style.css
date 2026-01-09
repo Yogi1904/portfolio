@@ -3,3 +3,28 @@
         max-width: 720px;
     }
 }
+
+.form-control {
+  background-color: transparent;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  border-color: #222;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 0.9;
+}
+
+.form-control:focus::placeholder {
+  opacity: 0.75;
+}
+
+textarea.form-control {
+  min-height: 60vh;
+  resize: none;
+}

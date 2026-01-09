@@ -8,7 +8,11 @@
             <% blogs.forEach(blog => { %>
                 <a href="/blogs/<%= blog.id %>" class="text-decoration-none">
                     <p class="d-flex align-items-center my-3">
-                        <span class="text-white-50"><%= blog.date %></span>
+                        <span class="text-white-50"><%= new Date(blog.date).toLocaleString('en-US', { 
+                            day: '2-digit', 
+                            month: 'long', 
+                            year: 'numeric' 
+                        }) %></span>
                         <span class="ms-3 text-white"><%= blog.title %></span>
                     </p>
                 </a>

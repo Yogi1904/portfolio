@@ -7,7 +7,11 @@
         <div class="body pb-3">
             <div class="mb-3">
                 <h2 class="text-white h2"> <%= blog.title %> </h2>
-                <div class="text-white-50"> <%= blog.date %> </div>
+                <div class="text-white-50"> <%= new Date(blog.date).toLocaleString('en-US', { 
+                    day: '2-digit', 
+                    month: 'long', 
+                    year: 'numeric' 
+                }) %> </div>
             </div>
 
             <p class="text-white"> <%= blog.content %> </p>
