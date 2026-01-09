@@ -28,3 +28,9 @@ textarea.form-control {
   min-height: 60vh;
   resize: none;
 }
+
+.preserve-newlines {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.55;
+}
