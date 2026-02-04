@@ -5,18 +5,22 @@
     <div class="container fixed-md-container">
         <%- include('partials/navbar') %>
         <div class="body pb-3">
-            <% blogs.forEach(blog => { %>
-                <a href="/blogs/<%= blog.id %>" class="text-decoration-none">
-                    <p class="d-flex align-items-center my-3">
-                        <span class="text-white-50"><%= new Date(blog.date).toLocaleString('en-US', { 
-                            day: '2-digit', 
-                            month: 'long', 
-                            year: 'numeric' 
-                        }) %></span>
-                        <span class="ms-3 text-white"><%= blog.title %></span>
-                    </p>
-                </a>
-            <% }) %>
+            <% if(blogs.length){ %>
+                <% blogs.forEach(blog => { %>
+                    <a href="/blogs/<%= blog.id %>" class="text-decoration-none">
+                        <p class="d-flex align-items-center my-3">
+                            <span class="text-white-50"><%= new Date(blog.date).toLocaleString('en-US', { 
+                                day: '2-digit', 
+                                month: 'long', 
+                                year: 'numeric' 
+                            }) %></span>
+                            <span class="ms-3 text-white"><%= blog.title %></span>
+                        </p>
+                    </a>
+                <% }) %>
+            <% } else { %>
+                <p class="text-white-50"><%= message %></p>
+            <% } %>
         </div>
         <%- include('partials/footer') %>
     </div>
